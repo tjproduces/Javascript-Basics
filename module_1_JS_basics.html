@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html>  
+<head>
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <script>  
+
+        function runProgram() {  
+            var num = document.getElementById("number").value;  
+            var result = factorial(num);  
+            document.getElementById("answer").innerHTML="Your Result: " + result;  
+        }  
+
+        function factorial(num) {  
+            if (num == 0) {  
+            return 1;  
+            }  
+            else {  
+            return num * factorial( num - 1 );  
+            }  
+        } 
+        
+
+    </script>  
+</head>  
+<body> 
+    <h1>JS Basics - Factorial Program  </h1>
+
+    <p>Enter a number: <input id = "number">  </p>
+    <button data-anijs="if: click, do: flipInY animated" onclick = "runProgram()"> Calculate </button>  
+    <p id = "answer">Your Result: </p>  
+
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
+</body>  
+</html>  
